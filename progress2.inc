@@ -64,7 +64,7 @@ stock PlayerBar:CreatePlayerProgressBar(
 ) {
 	if(!IsPlayerConnected(playerid)) {
 		#if defined _logger_included
-			err("attempt to create player progress bar for invalid player",
+			Logger_Err("attempt to create player progress bar for invalid player",
 				_i("playerid", playerid));
 		#else 
 			printf("attempt to create player progress bar for invalid player | playerid: %d", playerid);
@@ -76,7 +76,7 @@ stock PlayerBar:CreatePlayerProgressBar(
 
 	if(barid == ITER_NONE) {
 		#if defined _logger_included
-			err("MAX_PLAYER_BARS limit reached.");
+			Logger_Err("MAX_PLAYER_BARS limit reached.");
 		#else 
 			print("MAX_PLAYER_BARS limit reached.");
 		#endif
