@@ -556,7 +556,7 @@ stock _progress2_renderBar(playerid, barid)
 	#else
 		#define    _ALS_OnScriptInit
 	#endif
-	#define    OnScriptInit    pbar__OnPlayerDisconnect
+	#define    OnPlayerDisconnect    pbar__OnPlayerDisconnect
 	#if    defined    pbar__OnPlayerDisconnect
 		forward pbar__OnPlayerDisconnect(playerid, reason);
 	#endif 
