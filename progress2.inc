@@ -64,8 +64,7 @@ stock PlayerBar:CreatePlayerProgressBar(
 ) {
 	if(!IsPlayerConnected(playerid)) {
 		#if defined _logger_included
-			Logger_Err("attempt to create player progress bar for invalid player",
-				_i("playerid", playerid));
+			Logger_Err("attempt to create player progress bar for invalid player",("playerid", playerid));
 		#else 
 			printf("attempt to create player progress bar for invalid player | playerid: %d", playerid);
 		#endif
