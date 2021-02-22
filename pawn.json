@@ -5,7 +5,6 @@
     "output": "test.amx",
     "dependencies": [
         "Southclaws/samp-stdlib",
-        "Southclaws/samp-logger",
         "pawn-lang/YSI-Includes"
     ],
     "dev_dependencies": [
