@@ -545,16 +545,16 @@ stock _progress2_renderBar(playerid, barid)
 
 	public OnPlayerDisconnect(playerid, reason)
 	{
-		Iter_Init(pbar_Index);
+		Iter_Clear(pbar_Index[playerid])
 	#if    defined    pbar__OnPlayerDisconnect
 		pbar__OnPlayerDisconnect(playerid, reason);
 	#endif
 		return 1;
 	}
-	#if    defined    _ALS_OnScriptInit
-		#undef    OnScriptInit
+	#if    defined    _ALS_OnPlayerDisconnect
+		#undef    OnPlayerDisconnect
 	#else
-		#define    _ALS_OnScriptInit
+		#define    _ALS_OnPlayerDisconnect
 	#endif
 	#define    OnPlayerDisconnect    pbar__OnPlayerDisconnect
 	#if    defined    pbar__OnPlayerDisconnect
